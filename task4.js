@@ -64,8 +64,8 @@ const roles = [true, false, false, true, false];
 let newRoles = []
 for (let i = 0; i < roles.length; i++) {
 let rl = (roles[i] == true) ? 'admin' : 'user'
-newRoles.push('role: ' + rl);
-} 
+newRoles.push({role: rl});
+}
 
 
 
@@ -188,16 +188,11 @@ function getRandomRGB(r, g, b) {
 
 // getSquares(56, 87) - выведет квадраты чисел от 56 до 87
 
-function square(a) {
-    let sqr = a*a
-    return sqr
-}
-
 function getSquares(min, max) {
     for (let i = min; i < max; i++ ) {
-        console.log(square(i))
+        console.log(i*i)
     }
-}
+  }
 
 // Задание 9
 
