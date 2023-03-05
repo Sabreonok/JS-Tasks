@@ -5,8 +5,9 @@
 // Вам понадобятся методы строк.
 
 function ucFirst(str) {
-   let lc = str.toLowerCase();
-   return lc;
+   let uc = str.slice(0, 1).toUpperCase();
+   let lc = str.slice(1);
+   console.log(uc + lc);
 }
 
 // Задание 2
@@ -15,7 +16,8 @@ function ucFirst(str) {
 // Функция должна быть нечувствительна к регистру.
 
 function checkSpam(str) {
-    if (str.includes('badWords') || str.includes('XXX')) {
+    let newStr = str.toLowerCase()
+    if (newStr.includes('badWord'.toLowerCase()) || newStr.includes('XXX'.toLowerCase())) {
        return true
     }
     else {
@@ -79,8 +81,8 @@ let stations = [
   for (let i = 0; i < stations.length; i++) {
     let three = stations[i].slice(0, 3);
     let index = stations[i].indexOf(';');
-    let forHuman = stations[i].slice(index);
-    console.log(`${three}: ${forHuman.slice(1)}`);
+    let forHuman = stations[i].slice(index + 1);
+    console.log(`${three}: ${forHuman}`);
   }
 
 
@@ -97,7 +99,7 @@ let stations = [
 
 
 function nul(arr) {
-    if (arr.includes(0) === true) {
+    if (arr.includes(0)) {
         return true
     }
     else {
@@ -133,15 +135,17 @@ let strings = ["кришна", "кришна", "харе", "харе", "харе
 
 // - обойти исходный массив, если элемент отсутствует в новом - добавлять его в новый. Таким образом в новый добавятся только уникальные.
 
-let newArr = [];
 function unique(arr) {
+    let newArr = [];
   for (let i = 0; i < strings.length; i++) {
-    if (newArr.includes(strings[i]) === false) {
+    if (!newArr.includes(strings[i])) {
     newArr.push(strings[i])
     }
   }
   return newArr
 }
+
+console.log(unique(strings));
 
 
 // Задание 7
