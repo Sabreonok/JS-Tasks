@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-size: cover;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    padding: 30px;
+    background-color: #4a47475f;
+    /* background-image: url() */
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+div img {
+    z-index: 2;
+}
+
+div img:hover {
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+.active {
+    border: 3px red solid;
+}
