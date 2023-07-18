@@ -30,11 +30,11 @@ body {
 
 div img {
     z-index: 2;
+    transition: 1s;
 }
 
 div img:hover {
     transform: scale(1.05);
-    transition: 1s;
 }
 
 .active {
