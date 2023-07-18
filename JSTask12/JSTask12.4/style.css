@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.name {
+    font-weight: 800;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.email {
+    font-style: italic;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.body {
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
