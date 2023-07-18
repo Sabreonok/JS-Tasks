@@ -7,7 +7,9 @@ if (localStorage.imagesUrls) {
             item.classList.add('active');
         }
     })
-} 
+} else {
+    document.body.style.backgroundImage = `url(${img[0]})`;
+}
 
 window.addEventListener('click', (event) => {
     img.forEach(item => {
